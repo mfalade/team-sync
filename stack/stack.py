@@ -5,7 +5,7 @@ class Stack:
 
     def push(self, value):
         if self.is_full():
-            raise Exception('You cannot add more than 5 items')
+            raise StackOverflow('You cannot add more than 5 items')
         self.items.append(value)
 
     def peek(self):
@@ -16,3 +16,7 @@ class Stack:
 
     def pop(self):
         return self.items.pop()
+
+
+class StackOverflow(Exception):
+    pass

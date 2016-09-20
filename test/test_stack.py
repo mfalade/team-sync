@@ -8,7 +8,8 @@
 
 import unittest
 
-from stack.stack import Stack
+from stack import Stack
+from stack import StackOverflow
 
 
 
@@ -42,5 +43,5 @@ class StackTest(unittest.TestCase):
         self.assertEquals(self.stack.pop(), 4)
 
     def test_raises_exception_when_limit_is_exceeded(self):
-        with self.assertRaises(Exception):
+        with self.assertRaises(StackOverflow):
             [self.stack.push(i) for i in range(10)]
