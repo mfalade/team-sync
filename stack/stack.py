@@ -5,7 +5,7 @@ class Stack:
 
     def push(self, value):
         if self.is_full():
-            raise StackOverflow('You cannot add more than 5 items')
+            raise StackOverflow('You can\'t add more than {} items'.format(self.limit))
         self.items.append(value)
 
     def peek(self):
