@@ -5,6 +5,5 @@ python:
 install:
     - "pip install -r requirements.txt"
     - pip install coveralls    
-script:
-    - coverage run --source=team-sync test
+script: nosetests
 after_success: coveralls
