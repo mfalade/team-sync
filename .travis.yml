@@ -7,5 +7,4 @@ install:
     - pip install coveralls    
 script:
     - coverage run --source=team-sync test
-after_success:
-    coveralls
+after_success: coveralls
